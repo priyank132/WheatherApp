@@ -1,0 +1,11 @@
+<div clas='container'>
+<div *ngFor='let value of commonService.getWheatherInfo()'>
+<fieldset>
+  <label>Name: {{value.name}}</label><br>
+  <label>Current Condition: {{value.weather[0].description}}</label><br>
+  <label>Temperature: {{value.main.temp}}</label><br>
+  <label>Max-today: {{value.main.temp_max}} Min-today: {{value.main.temp_min}}</label>
+  <img [src]="commonService.getWeatherIcon(value.weather[0].id)" class="icon">
+</fieldset>
+</div>
+</div>
